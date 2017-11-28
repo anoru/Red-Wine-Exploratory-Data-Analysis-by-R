@@ -1,6 +1,6 @@
 # Red Wine Exploratory Data Analysis by R
 
-*Preview of the html [here]()*
+*Preview of the html [here](http://htmlpreview.github.io/?https://github.com/anoru/Red-Wine-Exploratory-Data-Analysis-by-R/blob/master/redWineEDA_Anouar.html)*
 
 In this project we will explores the univariate, bivariate, & multivariate
 relationships between variables using exploratory data analysis (EDA)
