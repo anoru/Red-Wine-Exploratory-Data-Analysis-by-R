@@ -402,7 +402,7 @@ hard to go out with  a good result
 In this section we will analyse our red wine dataset with 2 variables at a
 time. starting with a correlation graph may help us. 
 
-```{r echo=FALSE, Correlation_graph}
+```{r echo=FALSE, warning=FALSE, Correlation_graph}
 # make the quality numeric so it doesnt' get ignored in the coorelation graph
 redwine$quality<- as.numeric(redwine$quality)
 ggcorr(redwine %>% 
@@ -486,7 +486,7 @@ A 'good' wine generally has these trends:
 ```{r echo=FALSE, acid_relation1}
 
 ggplot(data = redwine, aes(x = fixed.acidity, y = citric.acid)) +
-  geom_point() +
+  geom_point(alpha = 1/4) +
   geom_smooth(method = "lm")
 cor.test(redwine$fixed.acidity, redwine$citric.acid)
 
@@ -499,7 +499,7 @@ acidity has a very weak positive correlation of 0.12.
 ```{r echo=FALSE, acid_relation2}
 
 ggplot(data = redwine, aes(x = volatile.acidity, y = citric.acid)) +
-  geom_point() +
+  geom_point(alpha = 1/4) +
   geom_smooth(method = "lm")
 cor.test(redwine$volatile.acidity, redwine$citric.acid)
 
@@ -730,7 +730,7 @@ ggplot(data = subset(redwine, rating != 'average'),
   geom_jitter(size = 2, alpha = 1/2) +
   geom_point() +
   geom_smooth(method = "lm", se = FALSE, size = 1) +
-  labs(x = "Volatile Acidity",
+  labs(x = "Volatile Acidity (g/dm^3)",
        y = "Alcohol (% by Volume)",
        title = "Alcohol vs. Volatile Acidity on Wine Quality")
 ```
