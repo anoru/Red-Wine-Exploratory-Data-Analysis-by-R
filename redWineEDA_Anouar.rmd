@@ -770,7 +770,7 @@ is just a test, and our binary classifier for this dataset is if the quality mor
 than 5 (1), or less than 5 (0). We are comparing the rate at which our classifier
 is making correct predictions (True Positives or TP) and the rate at which your
 classifier is making false alarms (False Positives or FP). We will use a
-generalized linear models (Just to change the linear model)
+generalized linear models.
 
 for more informations check this : 
 [ROC Curves in Python and R](http://blog.yhat.com/posts/roc-curves.html)
